@@ -1,6 +1,6 @@
  let num, acc = 0, flag=0, clase =""; op = "";
  let e = Math.E, pi = Math.PI;
- primos=[2,3,5,7,11,13,17,19,23,29]
+ 
  
   function operacion (){if(flag =1) {calcular();}}
   function sqrt() {num.value = Math.sqrt(num.value); flag=1;}
@@ -32,7 +32,7 @@
 		let lista =num.value.split(",");
 		let i = 0, acc = 0;
 		while ( i < lista.length ) {
-		acc = parseFloat(acc + (+lista[i]));
+		acc = Number(acc + (+lista[i]));
 		i++;
 		}
   
@@ -41,7 +41,7 @@
 		let lista =num.value.split(",");
 		let i = 0, acc = 1;
 		while ( i < lista.length ) {
-		acc = parseFloat(acc * (+lista[i]));
+		acc = Number(acc * (+lista[i]));
 		i++;
 		}
   
