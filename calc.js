@@ -1,5 +1,5 @@
- var num, acc = 0, flag=0, clase =""; op = "";
- var e = Math.E, pi = Math.PI;
+ let num, acc = 0, flag=0, clase =""; op = "";
+ let e = Math.E, pi = Math.PI;
  primos=[2,3,5,7,11,13,17,19,23,29]
  
   function operacion (){if(flag =1) {calcular();}}
@@ -29,8 +29,8 @@
   function xy(){acc = +num.value; op= "xy"; vaciar ();}
   function round () {num.value = Math.round (num.value, 3);}
   function suma() { 
-		var lista =num.value.split(",");
-		var i = 0, acc = 0;
+		let lista =num.value.split(",");
+		let i = 0, acc = 0;
 		while ( i < lista.length ) {
 		acc = parseFloat(acc + (+lista[i]));
 		i++;
@@ -38,8 +38,8 @@
   
 		num.value = acc;}
   function prod() { 
-		var lista =num.value.split(",");
-		var i = 0, acc = 1;
+		let lista =num.value.split(",");
+		let i = 0, acc = 1;
 		while ( i < lista.length ) {
 		acc = parseFloat(acc * (+lista[i]));
 		i++;
@@ -48,8 +48,8 @@
 		num.value = acc;}	
 		
   function primo(){
-		var count =0, n =  Math.abs(num.value);
-		for(var i =1;i<=n; i++){
+		let count =0, n =  Math.abs(num.value);
+		for(let i =1;i<=n; i++){
 		if (n % i===0){count ++;}}
 		if (count === 2){
 			num.value= num.value + " es primo";
@@ -59,18 +59,18 @@
 		   
 		
   }
-  function divi (){ var n1 = Math.abs(num.value);
-		var divo =[];
-		for (var i=1; i<=n1; i++){
+  function divi (){ let n1 = Math.abs(num.value);
+		let divo =[];
+		for (let i=1; i<=n1; i++){
 			if (n1 % i === 0) {divo.push(i);}
 			  
 		num.value = divo;	  
 			 }
 		}
   function mcd (){
-	var ns = num.value.split(",");
-	var x= ns[0], y = ns[1];
-	var resto =0;
+	let ns = num.value.split(",");
+	let x= ns[0], y = ns[1];
+	let resto =0;
 	while (x % y !== 0){
 		resto = x % y;
 		x=y;
@@ -81,15 +81,15 @@
 	  return r;
   }	
 	function mcm(){
-	var ns = num.value.split(",");
-	var x= ns[0], y = ns[1];
-	var r = mcd (x,y);
+	let ns = num.value.split(",");
+	let x= ns[0], y = ns[1];
+	let r = mcd (x,y);
 	num.value = x*y/r;
 	}
 	function factor (){
-	var fact =[];		
-		var n1 = num.value;
-		var i=0;
+	let fact =[];		
+		let n1 = num.value;
+		let i=0;
 		while(primos[i]<=n1){
 			if (n1 % primos[i] === 0) {fact.push(primos[i]);n1=n1/primos[i];}
 			else{i++;}
